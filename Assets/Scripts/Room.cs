@@ -1,16 +1,9 @@
 using UnityEngine;
 
-public class Room : MonoBehaviour
+[CreateAssetMenu(menuName = "TextAdventure/Room")]
+public class Room : ScriptableObject
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [TextArea]
+    public string description;
+    public string roomName;
 }

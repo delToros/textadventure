@@ -782,6 +782,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192485608}
   m_CullTransparentMesh: 0
+--- !u!1 &1197124433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197124436}
+  - component: {fileID: 1197124435}
+  - component: {fileID: 1197124434}
+  m_Layer: 0
+  m_Name: Gama Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1197124434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197124433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbfdcd412e88fc44b98b0d05b7365ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomNavigation
+  currentRoom: {fileID: 11400000, guid: 2ab494f60766251489a36d01cdc3284a, type: 2}
+--- !u!114 &1197124435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197124433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a37ff5d59ab9641a282aa85ea1e014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameController
+  displayText: {fileID: 540468169}
+  roomNavigation: {fileID: 0}
+--- !u!4 &1197124436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197124433}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 591.8732, y: 434.15076, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1359698765
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,7 +1024,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.9573, y: -211}
+  m_AnchoredPosition: {x: -16.2, y: -158.7}
   m_SizeDelta: {x: 690.5126, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407612715
@@ -1478,6 +1538,7 @@ GameObject:
   - component: {fileID: 2131637318}
   - component: {fileID: 2131637320}
   - component: {fileID: 2131637319}
+  - component: {fileID: 2131637321}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1542,6 +1603,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2131637317}
   m_CullTransparentMesh: 0
+--- !u!114 &2131637321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131637317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbfdcd412e88fc44b98b0d05b7365ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomNavigation
+  currentRoom: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1549,3 +1623,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1705484976}
   - {fileID: 192296565}
+  - {fileID: 1197124436}

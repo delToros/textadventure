@@ -33,23 +33,27 @@ public class GameController : MonoBehaviour
 
     public void DisplayRoomText()
     {
-        // 2
+        ClearCollectionsForNewRoom();
+
         UnpackRoom();
 
-        // 3
         // Add descriptions to our combined text
         string joinedInteractionDescriptions = string.Join("\n", interactionDescriptionsInRoom.ToArray());
 
-        // 4
         string combinedText = roomNavigation.currentRoom.description + "\n" + joinedInteractionDescriptions;
 
         LogStringWithReturn(combinedText);
     }
 
-    // 1
     void UnpackRoom()
     {
         roomNavigation.UnpackExitsInRoom();
+    }
+
+    void ClearCollectionsForNewRoom()
+    {
+        interactionDescriptionsInRoom.Clear();
+        roomNavigation.ClearExits();
     }
 
     public void LogStringWithReturn(string stringToAdd)

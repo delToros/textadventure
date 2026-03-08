@@ -838,6 +838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameController
   displayText: {fileID: 540468169}
+  inputActions:
+  - {fileID: 11400000, guid: bfea46cfba9e47543bd16fd4693a19dc, type: 2}
   roomNavigation: {fileID: 0}
   interactionDescriptionsInRoom: []
 --- !u!4 &1197124436

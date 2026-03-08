@@ -7,6 +7,9 @@ public class GameController : MonoBehaviour
 {
     public TextMeshProUGUI displayText;
 
+    // set up in inspector
+    public InputAction[] inputActions;
+
     [HideInInspector] public RoomNavigation roomNavigation;
 
     // List of interactable objects
@@ -33,6 +36,7 @@ public class GameController : MonoBehaviour
 
     public void DisplayRoomText()
     {
+        // 2
         ClearCollectionsForNewRoom();
 
         UnpackRoom();
@@ -50,6 +54,7 @@ public class GameController : MonoBehaviour
         roomNavigation.UnpackExitsInRoom();
     }
 
+    // 1
     void ClearCollectionsForNewRoom()
     {
         interactionDescriptionsInRoom.Clear();

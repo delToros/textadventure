@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TextInput : MonoBehaviour
@@ -19,6 +20,22 @@ public class TextInput : MonoBehaviour
     {
         userInput = userInput.ToLower();
         controller.LogStringWithReturn(userInput);
+
+        // 1
+        char[] delimeterCharacters = { ' ' };
+        string[] separatedInputWords = userInput.Split(delimeterCharacters);
+
+        for (int i = 0; i < controller.inputActions.Length; i++)
+        {
+            InputAction inputAction = controller.inputActions[i];
+            if (inputAction.keyword == separatedInputWords[0])
+            {
+                inputAction.RespondToInput(controller, separatedInputWords);
+            }
+
+        }
+
+
         InputComplete();
     }
 
